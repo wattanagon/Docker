@@ -1,0 +1,20 @@
+version: '3'
+services:
+    angular-web:
+        build:
+            context: angular/my-app
+        ports:
+            - 3000:80
+        container_name: docker-angular
+    react-web:
+        build:
+            context: react/my-app
+        ports:
+            - 3002:80
+        container_name: docker-react
+    nodejs-web:
+        build:
+            context: nodejs/my-app
+        ports:
+            - 3003:8080
+        container_name: docker-nodejs    
